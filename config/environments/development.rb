@@ -53,7 +53,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
-  #config.i18n.fallbacks = [I18n.default_locale]
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -63,10 +63,8 @@ Rails.application.configure do
 
   # Enable Bullet to track redundant DB queries
   config.after_initialize do
-    #Bullet.enable = false
-    #Bullet.rails_logger = true
-    #Bullet.add_footer = true
+    Bullet.enable = false
+    Bullet.rails_logger = true
+    Bullet.add_footer = true
   end
-
-  Paperclip.options[:command_path] = "/usr/bin/identify"
 end

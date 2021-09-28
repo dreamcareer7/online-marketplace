@@ -42,7 +42,7 @@ class Business::MessagesController < Business::BaseController
   private
 
   def message_params
-    params.require(:message).permit(:body, :receiving_user_id, :receiving_user_type, :project_id, :conversation_id, :attachment_attributes => [ :id, :attachment, :_destroy ])
+    params.require(:message).permit(:body, :receiving_user_id, :receiving_user_type, :project_id, :conversation_id)
   end
 
   def policy(record)
